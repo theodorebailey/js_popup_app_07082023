@@ -9,15 +9,34 @@
 <body>
 
     <div class="container">
-        <button type="submit" class="btn">submit</button>
-        <div class="popup">
+        <button type="submit" class="btn" onclick="openPopup()">submit</button>
+        <div class="popup" id="popup">
             <img src="404-tick.png" alt="tick">
             <h2>thank you</h2>
             <p>your details have been successfully submitted...</p>
-            <button type="button">OK</button>
+            <button type="button" onclick="closePopup()">OK</button>
         </div>
 
     </div>
+
+    <script>
+
+        let popup = document.getElementById("popup");
+
+        // have to change popup properties to make visible
+        function openPopup() {
+            // add popup to make visible
+            popup.classList.add("open-popup");
+
+        }
+
+        function closePopup() {
+            // add popup to make visible
+            popup.classList.remove("open-popup");
+        }
+
+
+    </script>
     
 </body>
 </html>
